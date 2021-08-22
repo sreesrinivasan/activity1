@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Functions
+        </title>
+    <style>
+            body{
+                text-align: center;
+                font-size: large;
+                background-color: gray;
+                color: black;
+                
+            }
+    </style>
+    </head>
+    <body>
+        <h1>ODD OR EVEN</h1>
+       <p>Enter the Number : [Named Function]<br> <input type="number" id="n_input" name="num1" min="0"/>
+        <button onclick="odd_even()">check</button></p>
+        <p id="respara" style="display: none;">It is an <span id="res"></span>Number</p>
+        <form method="post">
+            Enter the Number : [Anonymous Function] <br> <input type="number" id="num1" name="num1" min="0"/>
+            <input type="button" value="check" onclick="show(num1)" name="find"/>
+            <div style="margin-top:10px;" id="check"></div>
+        </form>
+    </body>
+    <script>
+        function odd_even(){
+           var n,temp;
+           n=Number(document.getElementById("n_input").value);
+           temp=document.getElementById("respara");
+           temp.style.display="block";
+           if(n%2==0)
+           {
+               document.getElementById("res").innerHTML="Even";
+           }
+           else{
+               document.getElementById("res").innerHTML="Odd";
+           }
+       }
+       let show=function(num1){
+           var num1=document.getElementById('num1').value;
+           if(num1%2==0){
+               document.getElementById('check').innerHTML="It is an EvenNumber";
+           }else{
+            document.getElementById('check').innerHTML="IT is an OddNumber";
+           }
+       }
+   </script>
+</html>

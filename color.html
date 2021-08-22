@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colors</title>
+    <style>
+        #container {
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+    background-color: blue;
+}
+
+#button {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    width: 250px;
+    height: 50px;
+}
+    </style>
+</head>
+<body>
+    <h1><center>COLOR</center></h1>
+    <div id="container">
+    </div>
+    <button id="button">Click me to change the color!</button>
+    <script>
+        let colors = ['blue', 'yellow', 'black', 'red', 'brown', 'orange'];
+        let button = document.getElementById('button');
+        button.addEventListener('click', function(){
+            var randomColor = colors[Math.floor(Math.random() * colors.length)]
+            let container = document.getElementById('container');
+            container.style.background = randomColor;
+})
+    </script>
+</body>
+</html>
+
+
+
+
+
